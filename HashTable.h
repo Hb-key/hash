@@ -22,9 +22,9 @@ typedef struct HashTable
 	Element *table;
 	int size;
 	int capacity;
-	HashFuncType hashFunc;        //¹şÏ£º¯Êı
+	HashFuncType hashFunc;        //å“ˆå¸Œå‡½æ•°
 }HashTable;
-
+//åˆå§‹åŒ–
 void HashInit(HashTable *pHT, int capacity, HashFuncType hashFunc)
 {
 	pHT->table = (Element*)malloc(sizeof(Element)*capacity);
@@ -44,7 +44,7 @@ void HashDestory(HashTable *pHT)
 	free(pHT->table);
 }
 
-//²éÕÒ
+//æŸ¥æ‰¾
 int HashSearch(HashTable *pHT, Key key)
 {
 	int index = pHT->hashFunc(key, pHT->capacity);
@@ -73,12 +73,12 @@ void ExpandIfRequired(HashTable *pHT)
 	//Element *newTable = (Element*)malloc(sizeof(Element)*newCapacity);
 	//assert(newTable);
 
-	////newTableµÄ×´Ì¬¸üĞÂÎªEMPTY
+	////newTableçš„çŠ¶æ€æ›´æ–°ä¸ºEMPTY
 	//for (int i = 0; i < newCapacity; i++)
 	//{
 	//	newTable[i].state = EMPTY;
 	//}
-	////ÀÏÊı¾İÇ¨ÒÆ
+	////è€æ•°æ®è¿ç§»
 
 	//free(pHT->table);
 	//pHT->table = newTable;
