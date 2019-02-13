@@ -62,7 +62,7 @@ int HashSearch(HashTable *pHT, Key key)
 	}
 	return -1;
 }
-
+//插入
 int HashInsert(HashTable *pHT, Key key);
 
 void ExpandIfRequired(HashTable *pHT)
