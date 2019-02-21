@@ -39,6 +39,7 @@ void HashInit(HashTable *pHT, int capacity, HashFuncType hashFunc)
 	}
 }
 
+//销毁
 void HashDestory(HashTable *pHT)
 {
 	free(pHT->table);
