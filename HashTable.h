@@ -119,6 +119,7 @@ int HashInsert(HashTable *pHT, Key key)
 	}
 }
 
+//移动
 int HashRemove(HashTable *pHT, Key key)
 {
 	int index = pHT->hashFunc(key, pHT->capacity);
